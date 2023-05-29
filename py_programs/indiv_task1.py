@@ -39,13 +39,10 @@ class Number:
         print(f"1: {self.first}")
         print(f"2: {self.second}")
 
-    def __contains__(self, number):
-        return self.first <= number <= self.second
-
     def rangecheck(self, number=None):
         if self.first > self.second:
             raise ValueError("Введенная левая граница больше правой!")
-        if isinstance(number, float):
+        if isinstance(number, float) or isinstance(number, int):
             pass
         else:
             try:
